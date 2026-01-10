@@ -85,11 +85,20 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-6 hide-585"
           >
             <TerminalAnimation />
             <FlowchartAnimation />
           </motion.div>
+          <style>
+            {`
+              @media (max-width: 585px) {
+                .hide-585 {
+                  display: none;
+                }
+              }
+            `}
+          </style>
         </div>
       </div>
 
